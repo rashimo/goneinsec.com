@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with Security Research - GONEINSEC</title>
+    <meta name="description" content="An introduction to setting up your security research environment">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="ascii-banner">
+ ██████╗  ██████╗ ███╗   ██╗███████╗██╗███╗   ██╗███████╗███████╗ ██████╗
+██╔════╝ ██╔═══██╗████╗  ██║██╔════╝██║████╗  ██║██╔════╝██╔════╝██╔════╝
+██║  ███╗██║   ██║██╔██╗ ██║█████╗  ██║██╔██╗ ██║███████╗█████╗  ██║
+██║   ██║██║   ██║██║╚██╗██║██╔══╝  ██║██║╚██╗██║╚════██║██╔══╝  ██║
+╚██████╔╝╚██████╔╝██║ ╚████║███████╗██║██║ ╚████║███████║███████╗╚██████╗
+ ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═╝╚═╝  ╚═══╝╚══════╝╚══════╝ ╚═════╝
+        </div>
+        <h1>Cybersecurity Research & Insights</h1>
+        <nav>
+            <a href="../index.html">[HOME]</a>
+            <a href="../index.html#blog">[BLOG]</a>
+            <a href="../index.html#about">[ABOUT]</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h1>Getting Started with Security Research</h1>
+            <p class="metadata">Published: 2026-01-13 | Category: Tutorial | Author: GONEINSEC</p>
+
+            <blockquote>
+                <span class="warning">[!]</span> This content is for educational purposes and authorized security testing only.
+                Always obtain proper authorization before testing any systems.
+            </blockquote>
+
+            <h2>// Introduction</h2>
+            <p>
+                Security research requires a methodical approach, proper tooling, and a strong ethical foundation.
+                This guide will help you set up your research environment and understand the fundamentals of responsible
+                security testing and analysis.
+            </p>
+
+            <h2>// Setting Up Your Lab Environment</h2>
+            <p>
+                A proper lab environment is essential for security research. Here are the key components:
+            </p>
+
+            <h3>1. Virtualization Platform</h3>
+            <p>
+                Use VMware, VirtualBox, or Proxmox to isolate your testing environment:
+            </p>
+            <pre><code># Example: Creating an isolated network in VirtualBox
+VBoxManage modifyvm "SecurityLab" --nic1 intnet
+VBoxManage modifyvm "SecurityLab" --intnet1 "isolated_net"</code></pre>
+
+            <h3>2. Essential Tools</h3>
+            <p>
+                Core tools for security research:
+            </p>
+            <ul>
+                <li><span class="checkmark">✓</span> <strong>Kali Linux / Parrot OS</strong> - Security-focused distributions</li>
+                <li><span class="checkmark">✓</span> <strong>Burp Suite / OWASP ZAP</strong> - Web application security testing</li>
+                <li><span class="checkmark">✓</span> <strong>Wireshark</strong> - Network protocol analyzer</li>
+                <li><span class="checkmark">✓</span> <strong>nmap</strong> - Network discovery and security auditing</li>
+                <li><span class="checkmark">✓</span> <strong>Python / Bash</strong> - Scripting for automation</li>
+            </ul>
+
+            <h3>3. Sample nmap Scan</h3>
+            <p>
+                Basic reconnaissance scan example:
+            </p>
+            <pre><code># TCP SYN scan with service detection
+sudo nmap -sS -sV -p- --open 192.168.1.0/24
+
+# Output will show:
+# PORT     STATE SERVICE VERSION
+# 22/tcp   open  ssh     OpenSSH 8.2p1
+# 80/tcp   open  http    Apache httpd 2.4.41
+# 443/tcp  open  https   Apache httpd 2.4.41</code></pre>
+
+            <h2>// Legal and Ethical Considerations</h2>
+            <p>
+                Before conducting any security research:
+            </p>
+            <table>
+                <tr>
+                    <th>Requirement</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Written Authorization</td>
+                    <td>Always obtain explicit written permission before testing</td>
+                </tr>
+                <tr>
+                    <td>Scope Definition</td>
+                    <td>Clearly define what systems and techniques are in scope</td>
+                </tr>
+                <tr>
+                    <td>Responsible Disclosure</td>
+                    <td>Follow coordinated vulnerability disclosure practices</td>
+                </tr>
+                <tr>
+                    <td>Data Protection</td>
+                    <td>Never exfiltrate or expose sensitive data</td>
+                </tr>
+            </table>
+
+            <h2>// Conclusion</h2>
+            <p>
+                Security research is a powerful discipline that requires technical skill, ethical responsibility,
+                and continuous learning. Start with authorized environments, build your skills gradually, and always
+                prioritize responsible testing practices.
+            </p>
+
+            <p>
+                <strong>Next Steps:</strong> Set up your lab environment and practice on platforms like HackTheBox,
+                TryHackMe, or VulnHub. Experiment with both offensive and defensive techniques to build a comprehensive
+                understanding of security.
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 GONEINSEC.COM | Cybersecurity Research</p>
+        <p><a href="../index.html">← Back to Home</a></p>
+    </footer>
+</body>
+</html>
